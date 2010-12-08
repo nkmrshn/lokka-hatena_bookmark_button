@@ -7,7 +7,6 @@ module Lokka
 
       app.put '/admin/plugins/hatena_bookmark_button' do
         params.each_pair do |key, value|
-          p key + ":" + value
           eval("Option.#{key}='#{value}'")
         end 
         flash[:notice] = t.hatena_bookmark_button_updated
