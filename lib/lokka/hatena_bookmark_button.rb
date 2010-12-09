@@ -16,7 +16,9 @@ module Lokka
   end
 
   module Helpers
-    def hatena_bookmark_button(title, url = request.env['REQUEST_URI'])
+    def hatena_bookmark_button(title, url = nil)
+      url = "#{env['rack.url_scheme']}://#{env['HTTP_HOST']}#{env['SCRIPT_NAME']}#{env['PATH_INFO']}" if url.blank?
+
       layout = Option.hatena_bookmark_button_layout
       layout = 'standard' if layout.blank?
 
