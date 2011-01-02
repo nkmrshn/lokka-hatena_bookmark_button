@@ -7,7 +7,7 @@ module Lokka
 
       app.put '/admin/plugins/hatena_bookmark_button' do
         params.each_pair do |key, value|
-          eval("Option.#{key}='#{value}'")
+          eval("Option.#{key}='#{value}'") if key != '_method'
         end 
         flash[:notice] = t.hatena_bookmark_button_updated
         redirect '/admin/plugins/hatena_bookmark_button'
