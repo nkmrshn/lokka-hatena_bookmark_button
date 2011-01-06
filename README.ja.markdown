@@ -16,7 +16,7 @@ Lokka Hatena Bookmark Button
 
 ヘルパーメソッドとして、「hatena_bookmark_button」があります。テーマのテンプレートを変更することをお忘れずにお願いします。このヘルパーメソッドには、引数が二つあります。一番目はタイトルを指定し、二番目はURLです。URLを指定しなかった場合、表示しているページのURLを使います。
 
-   <%= hatena_bookmark_button(@entry.title) %>
+    <%= hatena_bookmark_button(@entry.title) %>
 
 URLを指定したい場合は、文字列引数としてメソッドに指定してください。
 
