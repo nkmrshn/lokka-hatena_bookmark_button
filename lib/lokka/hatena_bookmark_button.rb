@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 module Lokka
   module HatenaBookmarkButton
     def self.registered(app)
