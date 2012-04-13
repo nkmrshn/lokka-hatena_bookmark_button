@@ -10,6 +10,7 @@ Run these commands:
 
     $ cd public/plugin
     $ git clone git://github.com/nkmrshn/lokka-hatena_bookmark_button.git
+    $ rm -rf lokka-hatena_bookmark_button/.git
 
 Usage
 -----
