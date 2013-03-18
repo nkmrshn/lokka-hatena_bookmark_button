@@ -4,16 +4,16 @@ module Lokka
     def self.registered(app)
       app.get '/admin/plugins/hatena_bookmark_button' do
         haml :"plugin/lokka-hatena_bookmark_button/views/index", :layout => :"admin/layout"
-      end 
+      end
 
       app.put '/admin/plugins/hatena_bookmark_button' do
         params.each_pair do |key, value|
           eval("Option.#{key}='#{value}'") if key != '_method'
-        end 
+        end
         flash[:notice] = t.hatena_bookmark_button_updated
         redirect '/admin/plugins/hatena_bookmark_button'
-      end 
-    end 
+      end
+    end
   end
 
   module Helpers
@@ -21,7 +21,7 @@ module Lokka
       url = "#{env['rack.url_scheme']}://#{env['HTTP_HOST']}#{env['SCRIPT_NAME']}#{env['PATH_INFO']}" if url.blank?
 
       layout = Option.hatena_bookmark_button_layout
-      layout = 'standard' if layout.blank?
+      layout = 'standard-balloon' if layout.blank?
 
       opts = {'data-hatena-bookmark-layout' => layout, 'data-hatena-bookmark-title' => title}
 

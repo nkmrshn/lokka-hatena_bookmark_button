@@ -2,6 +2,9 @@ ja:
   hatena_bookmark_button: はてなブックマークボタン
   hatena_bookmark_button_updated: 更新しました。
   hatena_bookmark_button_layout: タイプ
+  hatena_bookmark_button_layout_standard_balloon: スタンダード（新）
+  hatena_bookmark_button_layout_vertical_balloon: バーティカル（新）
+  hatena_bookmark_button_layout_simple_balloon: シンプル（ブックマーク数あり）
   hatena_bookmark_button_layout_standard: スタンダード
   hatena_bookmark_button_layout_vertical: バーティカル
   hatena_bookmark_button_layout_simple: シンプル
